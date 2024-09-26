@@ -33,7 +33,6 @@ const createMockUsers = async (numOfUsers) => {
 };
 //generate fake travels
 const createMockTravels = async (users, numTravels) => {
-    console.log('func starts');
     let travels = [];
     for (let i = 0; i < numTravels; i++) {
         let randomUser = users[Math.floor(Math.random() * users.length)];  // picks random user to assign it in travels
@@ -71,4 +70,3 @@ const generateMockData = async () => {
 };
 
 connectDB();
-//mongoose.connection.dropDatabase();
