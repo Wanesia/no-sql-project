@@ -1,0 +1,17 @@
+{
+  "name": "nosqlproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connection.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongodb": "^6.9.0"
+  }
+}
