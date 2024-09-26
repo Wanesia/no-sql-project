@@ -171,10 +171,8 @@ const insertUser = async (nickname, email, password) => {
 //insert travel
 const insertTravel = async (title, description, location, image, dateFrom, dateTo, userId) => {
   try {
-      const userObjectId = mongoose.Types.ObjectId(userId);
-
       // Check if the user exists
-      const userExists = await User.findById(userObjectId);
+      const userExists = await User.findById(userId);
       if (!userExists) {
           console.error('User does not exist');
           return;
@@ -186,7 +184,7 @@ const insertTravel = async (title, description, location, image, dateFrom, dateT
           image,
           date_from: dateFrom,
           date_to: dateTo,
-          user: userObjectId, // Correctly reference the ObjectId or it will throw error
+          user: userId, // Correctly reference the ObjectId or it will throw error
       });
 
       await newTravel.save();
