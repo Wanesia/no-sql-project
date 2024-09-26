@@ -222,7 +222,7 @@ const querySelection = async () => {
         case 1:
           rl.question(
             `Select a query: 
-1: Find travels by user ID
+            1: Find travels by user ID
             2: Sort users by name
             3: Find user by name and sort their travels by title
             4: Count number of travels for a user
